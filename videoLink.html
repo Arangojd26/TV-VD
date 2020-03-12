@@ -20,19 +20,30 @@
 
 <body>
 
-    
+    <header>
 
-        <video autoplay muted loop id="myVideo" height="100%" width="100%">
+
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="myVideo">
             <source src="assets/vid/Skeler.mp4" type="video/mp4">
-            <div class="container">
-                <button id="myBtn" class="btn btn-info" onclick="myFunction()">Pause</button>
-            </div>    
         </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Video Header</h1>
+                    <button id="myBtn" class="btn btn-info" onclick="myFunction()">Pause</button>
+                </div>
+            </div>
+        </div>
 
 
-        
-    
-    
+    </header>
+
+
+
+
+
+
 
 
 
