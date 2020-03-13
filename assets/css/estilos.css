@@ -1,65 +1,67 @@
 body {
-    margin: 0;
-    font-family: Arial;
-    font-size: 17px;
-  }
-  .content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-  }
-  #myBtn {
-    cursor: pointer;
-  }
-  #myBtn:hover {
-    background: #ddd;
-    color: black;
-  }
-  header {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  min-height: 25rem;
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
   width: 100%;
-  overflow: hidden;
+  padding: 20px;
+}
+#myBtn {
+  cursor: pointer;
+}
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+header {
+position: relative;
+background-color: black;
+height: 100vh;
+min-height: 25em;
+width: 100%;
+overflow: hidden;
 }
 
 header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: 0;
+-ms-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
 }
 
 header .container {
-  position: relative;
-  z-index: 2;
+position: absolute;
+min-width: 100%;
+min-height: 100%;
+z-index: 2;
 }
 
 header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: 0.5;
+z-index: 1;
 }
 
 @media (pointer: coarse) and (hover: none) {
-  header video {
-    display: none;
-  }
+header video {
+  display: none;
+}
 }
