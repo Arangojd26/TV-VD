@@ -44,7 +44,7 @@
                     <form id="formulario" novalidate>
                         <div class="row form-group justify-content-center">
                             <div class="col-md-8 mt-3">
-                                <input type="text" name="nombre" value="" id="nombre" class="form-control" required>
+                                <input type="text" name="nombreJugador" value="" id="nombre" class="form-control" required>
                             </div>
                         </div>
                         <!-- Fila botón para guardar el nombre-->
