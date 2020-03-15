@@ -41,10 +41,10 @@
                     <div class="alert alert-success d-none" id="mensajeExito">Estudiante creado con éxito</div>
                     <div class="alert alert-danger d-none" id="mensajeError"></div>
                     <!-- Fila de ingresar valores-->
-                    <form id="formulario" novalidate>
+                    <form id="formulario" novalidate method="POST" action="videoLink.php">
                         <div class="row form-group justify-content-center">
                             <div class="col-md-8 mt-3">
-                                <input type="text" name="nombreJugador" value="" id="nombre" class="form-control" required>
+                                <input type="text" name="nombreJugador" value="" id="nombreJugador" class="form-control" required>
                             </div>
                         </div>
                         <!-- Fila botón para guardar el nombre-->
@@ -52,15 +52,16 @@
                             <button type="submit" class="btn btn-info mt-3" style="font-size:24px">Guardar
                                 <i class="fa fa-save"></i></button>
                         </div>
+                        
                         <!-- Fila botón para continuar con el video-->
                         <div class="row justify-content-center">
-                            <a class="text-light mt-5 pt-4" href="videoLink.html" role="button">
+                            <a class="text-light mt-5 pt-4" href="videoLink.php" role="button" id="enviarNombre" name="enviarNombre">
                                 <i class="fas fa-play-circle fa-spin display-1"></i>
                             </a>
 
                         </div>
                         <div class="text-center mt-3">
-                            <a href="videoLink.html" class="text-light" role="button">
+                            <a href="videoLink.php" class="text-light" role="button">
                                 <h5 class="text-light" style="font-size:24px">Continuar</h1>
                             </a>
                         </div>
@@ -72,8 +73,6 @@
         </div>
 
     </div>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

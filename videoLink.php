@@ -20,6 +20,8 @@
 
 <body>
 
+
+
     <header>
 
 
@@ -31,7 +33,20 @@
             <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
             <div class="d-flex h-100 text-center float-right align-items-end pb-5">
                 <div class="w-100 text-white pb-5 mr-5">
-                    <h1 class="display-3">Video Header</h1>
+                    <h1 class="display-3">
+                    <?php
+                        include_once 'app/conexion.php';
+                        //LEER
+                        $sql_leer = 'SELECT * FROM jugadores WHERE id > 0 ORDER BY id DESC LIMIT 1';
+                        $gsent = $pdo->prepare($sql_leer);
+                        $gsent->execute();
+
+                        $resultado = $gsent->fetchAll();
+                        foreach($resultado as $dato){
+                        echo $dato['nombreJugador'];
+                        }
+                    ?>
+                    </h1>
                     <button id="myBtn" class="btn btn-info" onclick="myFunction()">Pause</button>
                 </div>
             </div>
@@ -39,6 +54,8 @@
 
 
     </header>
+
+    
 
 
     <script src="app/reproductor.js" language="javascript" type="text/javascript"></script>

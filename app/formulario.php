@@ -34,6 +34,10 @@ if(empty($_POST["nombreJugador"])){
     $sentencia_agregar->execute(array($nombre));
 }
 
+
+
+
+
 //CUERPO DEL MENSAJE para enviar al email.
 $cuerpo = 'Nombre: '.$nombre.'\n';
 
