@@ -2,8 +2,6 @@
 
 include_once 'conexion.php';
 
-
-
 //LEER
 $sql_leer = 'SELECT * FROM jugadores';
 
@@ -17,7 +15,6 @@ $resultado = $gsent->fetchAll();
 // foreach($resultado as $dato){
 //     echo $dato['nombreJugador'];
 // }
-
 
 //AGREGAR nombre a la base de datos
 $error = '';
@@ -33,9 +30,6 @@ if(empty($_POST["nombreJugador"])){
     $sentencia_agregar = $pdo->prepare($sql_agregar);
     $sentencia_agregar->execute(array($nombre));
 }
-
-
-
 
 
 //CUERPO DEL MENSAJE para enviar al email.
