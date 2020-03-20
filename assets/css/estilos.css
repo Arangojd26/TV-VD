@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial;
-  font-size: 17px;
+  /* font-family: Arial; */
+  /* font-size: 17px; */
 }
 .content {
   position: fixed;
@@ -64,4 +64,84 @@ z-index: 1;
 header video {
   display: none;
 }
+}
+
+.html,
+body {
+  /* Para que funcione correctamente en Smarthpones y Tablets */
+  height: 100vh;
+}
+
+body {
+ /* Ruta relativa o completa a la imagen */
+  background-image: url("../img/02.jpg");
+  /* Centramos el fondo horizontal y verticalmente */
+  background-position: center center;
+  /* El fonde no se repite */
+  background-repeat: no-repeat;
+  /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
+  background-attachment: fixed;
+  /* El fonde se re-escala automáticamente */
+  background-size: cover;
+  /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
+  background-color: #FFF;
+  /* Fuente para el texto */
+  /* text-align: center;
+  color: #000;
+  font-family: "Times New Roman", Times, serif; */
+}
+
+/* Background para ancho máximo de la pantalla física */
+@media only screen and (max-device-width: 767px) {
+body {
+  background-image: url("../img/02.jpg");
+  color: #FFF;
+  }
+}
+/* Background para ancho máximo del navegador */
+@media only screen and (max-width: 767px) {
+body {
+  background-image: url("../img/02.jpg");
+  color: #FFF;
+  }
+ }
+
+@media (max-width: 767px) {
+
+  .top-content .carousel-control-prev,
+  .top-content .carousel-control-next {
+                display: none;
+  }
+
+  .top-content .carousel-indicators li {
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: .6s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }

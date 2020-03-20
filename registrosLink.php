@@ -10,7 +10,6 @@ $resultado = $gsent->fetchAll();
 
 ?>
 
-
 <!doctype html>
 <html lang="es">
 
@@ -25,6 +24,8 @@ $resultado = $gsent->fetchAll();
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <title>Video y TV</title>
+
+
 
     <style>
         .fondo {
@@ -57,46 +58,58 @@ $resultado = $gsent->fetchAll();
             font-size: 4.2em;
         }
     </style>
+
 </head>
 
 <body>
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 align-items-center">
                 <h1 class="text-center text-dark font-weight-bold text-uppercase">Estudiantes</h1>
                 <h3 class="display-4 lead text-light text-center font-weight-bold text-uppercase my-5">Puntajes</h3>
                 <div class="text-light text-center mb-5">
                     <i class="fa fa-spinner fa-pulse display-4"></i>
                 </div>
+                <div class="text-right mb-2">
+                    <a href="app/eliminar.php" class="btn btn-primary text-right">
+                        <i class="fa fa-trash"></i> Limpiar
+                    </a>
+                </div>
+
             </div>
 
         </div>
+
 
         <div class="row">
 
             <div class="col-md-12">
                 <table class="table-responsive">
-                    <table class="table table-hover ">
+                    <table class="table table-hover table-borderless">
 
-                        <thead class="thead-dark text-light">
+                        <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Score</th>
+
                             </tr>
                         </thead>
-                        <?php foreach ($resultado as $dato) : ?>
-                            <tbody>
+                        <tbody id="tablaRanking">
+                            <?php $cont = 1;
+                            foreach ($resultado as $dato) : ?>
                                 <tr>
-                                    <th scope="row"><?php echo $dato['id']; ?></th>
+                                    <th scope="row" id="ranking">
+                                        <?php
+                                        echo $cont;
+                                        $cont++;
+                                        ?></th>
                                     <td><?php echo $dato['nombreJugador']; ?></td>
                                     <td><?php echo $dato['score']; ?></td>
                                 </tr>
-                            </tbody>
-
-
-                        <?php endforeach ?>
+                            <?php endforeach ?>
+                        </tbody>
                     </table>
                 </table>
 
@@ -106,7 +119,6 @@ $resultado = $gsent->fetchAll();
 
 
     </div>
-
 
 
     <!-- Optional JavaScript -->
