@@ -22,31 +22,13 @@ $resultado = $gsent->fetchAll();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    
     <title>Video y TV</title>
 
 
 
     <style>
-        .fondo {
-            background: url("assets/img/02.jpg");
-            height: 50%;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .alto {
-            height: 100vh;
-        }
-
-        body {
-            background-color: white;
-            background-image: url("assets/img/02.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
 
         @media (max-width: 768px) {
             body {

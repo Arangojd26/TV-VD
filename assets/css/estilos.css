@@ -3,13 +3,29 @@ body {
   /* font-family: Arial; */
   /* font-size: 17px; */
 }
+.verticalrotate {
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  -ms-transform: rotate(-90deg);
+  -ms-transform-origin:right top;
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin:right top
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 .content {
   position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  /* bottom: 50%; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* color: #f1f1f1; */
   width: 100%;
-  padding: 20px;
+  /* padding: 20px; */
 }
 #myBtn {
   cursor: pointer;
@@ -20,7 +36,6 @@ body {
 }
 header {
 position: relative;
-background-color: black;
 height: 100vh;
 min-height: 25em;
 width: 100%;
